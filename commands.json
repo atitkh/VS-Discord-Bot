@@ -1,0 +1,49 @@
+{
+    "Help": {
+        "name":"Help Command",
+        "group":"User",
+        "desc":"Displays available commands.",
+        "usage":"help"
+    },
+
+    "Kick": {
+        "name":"Kick",
+        "group":"User",
+        "desc":"Kick a user from the server. Permissions Required.",
+        "usage":"kick <user>"
+    },
+
+    "Bot Info": {
+        "name":"Bot Info",
+        "group":"User",
+        "desc":"Displays the Bot's Info.",
+        "usage":"botinfo"
+    },
+
+    "Server Info": {
+        "name":"Server Info",
+        "group":"User",
+        "desc":"Displays the Server's Info.",
+        "usage":"serverinfo"
+    },
+
+    "Report": {
+        "name":"Report",
+        "group":"User",
+        "desc":"Report a user.",
+        "usage":"report <user>"
+    },
+
+    "Poll": {
+        "name":"Poll",
+        "group":"User",
+        "desc":"Start a poll.",
+        "usage":"poll <text>"
+    },
+    "Doge": {
+        "name":"Dogetrix Data",
+        "group":"User",
+        "desc":"Sends a data of dogetrix collection activity.",
+        "usage":"doge info <user>"
+    }
+}
