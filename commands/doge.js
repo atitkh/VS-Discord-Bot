@@ -11,7 +11,11 @@ module.exports = {
     const sumanID = '722887645612605482';
     const anjitID = '625260107978244108';
     const ankitID = '239431431594442753';
-    const registeredIDs = [atitID, sumanID, anjitID, ankitID];
+		const anishID = '367899942460850178';
+		const ashleshaID = '679667813937709102';
+		const gunjanID = '808005726932828170';
+		
+    const registeredIDs = [atitID, sumanID, anjitID, ankitID, anishID, ashleshaID, gunjanID];
 
     if (rUser) {
       const member = message.guild.member(rUser);
@@ -33,6 +37,18 @@ module.exports = {
             var data = pullData('anjitJSON');
             break;
           
+					case anishID:
+            var data = pullData('anishJSON');
+            break;
+
+					case ashleshaID:
+            var data = pullData('ashleshaJSON');
+            break;
+					
+					case gunjanID:
+            var data = pullData('gunjanJSON');
+            break;
+					
           default:
             var data = 'Empty';
             break; 
