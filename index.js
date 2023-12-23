@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { prefix } = require('./config.json');
-const token = process.env['token']
-
+require('dotenv').config();
+const token = process.env.TOKEN
 const bot = new Discord.Client({
   partials: ['MESSAGE', 'REACTION']
 });
