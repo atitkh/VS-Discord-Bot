@@ -182,6 +182,10 @@ bot.on('message', message => {
     case 'doge':
       bot.commands.get('doge').execute(message, args);
       break;
+
+    case 'ping':
+      bot.commands.get('ping').execute(message, args);
+      break;
   }
 })
 

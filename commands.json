@@ -45,5 +45,11 @@
         "group":"User",
         "desc":"Sends a data of dogetrix collection activity.",
         "usage":"doge info <user>"
+    },
+    "Ping": {
+        "name":"Ping",
+        "group":"User",
+        "desc":"Ping a user.",
+        "usage":"ping <user>"
     }
 }
