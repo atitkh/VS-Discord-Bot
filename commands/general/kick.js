@@ -6,7 +6,7 @@ const {
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('kick')
-        .setDescription('Kicks a user from the guild.')
+        .setDescription('Kicks a user from the server.')
         .addUserOption((option) => option.setName('user').setDescription('user to be kicked'))
         .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers),
     async execute(interaction) {
