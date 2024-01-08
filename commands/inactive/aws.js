@@ -46,10 +46,5 @@ module.exports = {
                 message.channel.send(`Unknown Command. Please type ${prefix}csserver to learn more.`);
             }
         }
-
-
-
-
-        //https://maker.ifttt.com/trigger/discord_request/with/key/bO6dgTdivMr7LBh4l5kPSr
     }
 }
