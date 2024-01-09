@@ -5,15 +5,7 @@ const {
 
 module.exports = {
     name: Events.MessageCreate,
-    once: true,
     async execute(message) {
-
-        if (message.channel.type === ChannelType.DM) {
-            return message.reply({
-                content: 'You can only use slash commands in servers!',
-                ephemeral: true,
-            });
-        }
 
         if (message.content.toLowerCase() === "hello") {
             message.channel.send("Hey!")
