@@ -9,6 +9,7 @@ const {
   GatewayIntentBits,
   Partials,
   Collection,
+  ActivityType
 } = require('discord.js');
 const fs = require('fs');
 const client = new Client({
@@ -37,7 +38,34 @@ const commandFolders = fs.readdirSync('./commands');
   client.login(process.env.TOKEN);
 })();
 
-client.on('ready', () => console.log(`${client.user.tag} has logged in!`));
+// var total_members = client.guilds.cache.map(g => g.memberCount).reduce((a, c) => a + c);
+
+client.on('ready', () => {
+  var activeMembers = 0;
+  var totalServers = 0;
+
+  setInterval(function () {
+    totalServers = client.guilds.cache.size;
+
+    activeMembers = 0;
+    client.guilds.cache.forEach(guild => {
+      activeMembers += guild.memberCount;
+    });
+
+    var activitiesList = [`${activeMembers} users`, `${totalServers} servers`];
+
+    client.user.setPresence({
+      activities: [{
+        name: `${activitiesList[Math.floor(Math.random() * activitiesList.length)]}`,
+        type: ActivityType.Listening
+      }],
+      status: 'online'
+    });
+  }, 30000);
+
+  console.log(`${client.user.tag} has logged in!`);
+});
+
 
 //Set up the Express router
 router.get('/', function (req, res) {
