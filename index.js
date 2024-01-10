@@ -38,8 +38,6 @@ const commandFolders = fs.readdirSync('./commands');
   client.login(process.env.TOKEN);
 })();
 
-// var total_members = client.guilds.cache.map(g => g.memberCount).reduce((a, c) => a + c);
-
 client.on('ready', () => {
   var activeMembers = 0;
   var totalServers = 0;
@@ -52,12 +50,13 @@ client.on('ready', () => {
       activeMembers += guild.memberCount;
     });
 
-    var activitiesList = [`${activeMembers} users`, `${totalServers} servers`];
+    var activitiesList = [`${activeMembers} Users`, `${totalServers} Servers`];
+    var activityType = [ActivityType.Watching, ActivityType.Listening];
 
     client.user.setPresence({
       activities: [{
         name: `${activitiesList[Math.floor(Math.random() * activitiesList.length)]}`,
-        type: ActivityType.Listening
+        type: activityType[Math.floor(Math.random() * activityType.length)]
       }],
       status: 'online'
     });
